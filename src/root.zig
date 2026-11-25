@@ -221,7 +221,7 @@ pub fn Vec3(comptime T: type) type {
         raw: Vector,
 
         pub inline fn init(x: T, y: T, z: T) Self {
-            return .{ .raw = .{ x, y, z, 0 } };
+            return .{ .raw = .from(.{ x, y, z, 0 }) };
         }
 
         pub inline fn as(elements: Vector.Vector) Self {
